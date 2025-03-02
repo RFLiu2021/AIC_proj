@@ -1,0 +1,12 @@
+
+Excitatory Neurons:
+clusterID 120-131, 133-135, 138:                      upper layer ITs
+clusterID 136-137, 139-152:                              Deep layer ITs
+clusterID 84,97-112 :                           Deeplayer CT and 6b
+clusterID 83,85-96:                         Deep-layer near-projecting
+clusterID 116-117:                          Miscellaneous  (ET & VEN-L ?)
+
+InhibitoryNeurons:
+clusterID 276-296:                                 CGE inter neurons
+clusterID 236,239-263:                           MGE inter neurons
+clusterID 264-275:                              LAMP5-LHX6 and Chandelier
