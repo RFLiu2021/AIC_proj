@@ -1,0 +1,141 @@
+
+// ------------------------------------------------
+//    Cell Geometry
+// ------------------------------------------------
+forall delete_section()
+
+proc celldef() {
+  subsets()
+  geom()
+  biophys()
+  geom_nseg()
+}
+
+apicNum		=	31
+dend1Num	=	5
+dend2Num	=	5
+dend3Num	=	5
+dend4Num	=	1
+dend5Num	=	8
+dend6Num	=	1
+myNum		=	10
+nodeNum		=	10
+
+create soma, dend1[dend1Num],  dend2[dend2Num], dend3[dend3Num], dend4[dend4Num], dend5[dend5Num], dend6[dend6Num], apic[apicNum]  //, my[myNum], node[nodeNum]
+
+load_file("soma_3d_morphMat.hoc")
+soma_shape()
+
+load_file("dends_3d_morphMat.hoc")
+dend1_shape()
+dend2_shape()
+dend3_shape()
+dend4_shape()
+dend5_shape()
+dend6_shape()
+
+load_file("apical_3d_morphMat.hoc")
+apical_shape()
+
+//connect the apical dendrite.
+connect apic[0](0), soma(0)        //apic[0] :R 
+connect apic[1](0), apic[0](1)     //apic[0] : R; apic[1] : R-1
+connect apic[2](0), apic[1](1)     //apic[2] : R-1-1
+connect apic[3](0), apic[1](1)     //apic[3] : R-1-2
+connect apic[4](0), apic[0](1)     //apic[4] : R-2
+connect apic[5](0), apic[4](1)     //apic[5] : R-2-1
+connect apic[6](0), apic[4](1)     //apic[6] : R-2-2
+connect apic[7](0), apic[6](1)     //apic[7] : R-2-2-1
+connect apic[8](0), apic[6](1)     //apic[8] : R-2-2-2
+connect apic[9](0), apic[8](1)     //apic[9] : R-2-2-2-1
+connect apic[10](0), apic[8](1)    //apic[10] : R-2-2-2-2
+connect apic[11](0), apic[7](1)    //apic[11] : R-2-2-1-1
+connect apic[12](0), apic[7](1)    //apic[12] : R-2-2-1-2
+connect apic[13](0), apic[12](1)   //apic[13] : R-2-2-1-2-1
+connect apic[14](0), apic[12](1)   //apic[14] : R-2-2-1-2-2
+connect apic[15](0), apic[11](1)   //apic[15] : R-2-2-1-1-1
+connect apic[16](0), apic[11](1)   //apic[16] : R-2-2-1-1-2
+connect apic[17](0), apic[15](1)   //apic[17] : R-2-2-1-1-1-1
+connect apic[18](0), apic[15](1)   //apic[18] : R-2-2-1-1-1-2
+connect apic[19](0), apic[17](1)   //apic[19] : R-2-2-1-1-1-1-1
+connect apic[20](0), apic[17](1)   //apic[20] : R-2-2-1-1-1-1-2
+connect apic[21](0), apic[19](1)   //apic[21] : R-2-2-1-1-1-1-1-1
+connect apic[22](0), apic[19](1)   //apic[22] : R-2-2-1-1-1-1-1-2
+connect apic[23](0), apic[22](1)   //apic[23] : R-2-2-1-1-1-1-1-2-1
+connect apic[24](0), apic[22](1)   //apic[24] : R-2-2-1-1-1-1-1-2-2
+connect apic[25](0), apic[23](1)   //apic[25] : R-2-2-1-1-1-1-1-2-1-1
+connect apic[26](0), apic[23](1)   //apic[26] : R-2-2-1-1-1-1-1-2-1-2
+connect apic[27](0), apic[24](1)   //apic[27] : R-2-2-1-1-1-1-1-2-2-1
+connect apic[28](0), apic[24](1)   //apic[28] : R-2-2-1-1-1-1-1-2-2-2
+connect apic[29](0), apic[26](1)   //apic[29] : R-2-2-1-1-1-1-1-2-1-2-1
+connect apic[30](0), apic[26](1)   //apic[30] : R-2-2-1-1-1-1-1-2-1-2-2
+
+
+
+connect dend1[0](0), soma(0.5)      //dend1[0] : R
+connect dend1[1](0), dend1[0](1)    //dend1[1] : R-1
+connect dend1[2](0), dend1[0](1)    //dend1[2] : R-2
+connect dend1[3](0), dend1[2](1)    //dend1[3] : R-2-1
+connect dend1[4](0), dend1[2](1)    //dend1[4] : R-2-2
+
+connect dend2[0](0), soma(0.5)      //dend2[0] : R
+connect dend2[1](0), dend2[0](1)    //dend2[1] : R-1
+connect dend2[2](0), dend2[0](1)    //dend2[2] : R-2
+connect dend2[3](0), dend2[1](1)    //dend2[3] : R-1-1
+connect dend2[4](0), dend2[1](1)    //dend2[4] : R-1-2
+
+connect dend3[0](0), soma(0.5)      //dend3[0] : R
+connect dend3[1](0), dend3[0](1)    //dend3[1] : R-1
+connect dend3[2](0), dend3[0](1)    //dend3[2] : R-2
+connect dend3[3](0), dend3[1](1)    //dend3[3] : R-1-1
+connect dend3[4](0), dend3[1](1)    //dend3[4] : R-1-2
+
+connect dend4[0](0), soma(0.5)      //dend4[0] : R
+
+connect dend5[0](0), soma(0.5)      //dend5[0] : R
+connect dend5[1](0), dend5[0](1)    //dend5[1] : R-1
+connect dend5[2](0), dend5[0](1)    //dend5[2] : R-2
+connect dend5[3](0), dend5[1](1)    //dend5[3] : R-1-1
+connect dend5[4](0), dend5[1](1)    //dend5[4] : R-1-2
+connect dend5[5](0), dend5[2](1)    //dend5[5] : R-2-1
+connect dend5[6](0), dend5[2](1)    //dend5[6] : R-2-2
+connect dend5[7](0), dend5[2](1)    //dend5[7] : R-2-3
+
+connect dend6[0](0), soma(0.5)      //dend6[0] : R
+
+// Group the apartments.
+objref all, somatic, apical,allDend
+proc subsets() { local i
+    objref  all, somatic, apical,allDend
+    
+    somatic = new SectionList()
+        soma somatic.append()
+    allDend = new SectionList()
+        for i=0, 4  dend1[i] allDend.append()
+        for i=0, 4  dend2[i] allDend.append()
+        for i=0, 4  dend3[i] allDend.append()
+        dend4 allDend.append()
+        for i=0, 7  dend5[i] allDend.append()
+        dend6 allDend.append()
+        for i=0, 30 apic[i]  allDend.append() 
+        soma  allDend.append()
+    apical = new SectionList()
+        for i=0, 30  apic[i] apical.append()
+}
+
+//adding axon
+load_file("createAxon_pc.hoc")
+create_axon()
+
+
+proc geom() {
+}
+proc geom_nseg() {
+}
+proc biophys() {
+}
+
+
+access soma
+
+celldef()

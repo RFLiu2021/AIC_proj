@@ -1,0 +1,95 @@
+/* ----------------------------------------------------------------
+    Define the Axon Geometry
+    
+    Layer 5 cortical pyramidal cell has a long unmyelinated axon!
+    Similar to Mainen et al (Neuron, 1995)
+------------------------------------------------------------------*/ 
+
+n_myelin = 14  // number of myelins and nodes
+create ais[2],hill,nakeaxon,myelin[2],node[2]  // forward declaration
+
+proc create_axon() {
+
+  create ais[10],hill,nakeaxon,myelin[n_myelin],node[n_myelin]
+  
+  // Acquire the equivalent diameter of soma
+  soma {  equiv_diam = sqrt(area(0.5)*nseg/(4*PI))  }   // "*nseg" is needed !!
+  if (numarg()) equiv_diam = $1
+  
+  // Set axonal diameters
+  diamAis=equiv_diam/10
+  diamNakeAxon=equiv_diam/12  
+  diamMyelin=diamAis*1.
+  diamNode=diamAis*0.75    // nodes are thinner than axon
+
+  // Initial segment
+
+hill {                							
+    L = 10							
+    nseg = 10							
+    diam(	0	:	0.25	) = 	6	:	3.8
+    diam(	0.25	:	0.5	) = 	3.8	:	2.8
+    diam(	0.5	:	0.75	) = 	2.8	:	1.7
+    diam(	0.75	:	1	) = 	1.7	:	1.3
+     							
+  }							
+				
+							
+for i=0,9 ais[i] {                 
+    L = 5
+    nseg = 10
+    diam = 1.22
+  }
+
+ais[0]	{						
+    diam(	0	:	1	) = 	1.7	:	1.5
+	}						
+							
+ais[1]	{						
+    diam(	0	:	1	) = 	1.5	:	1.22
+	}		  
+	
+	
+  // Unmylined axon
+  nakeaxon {                
+    L = 400
+    nseg = 100
+    diam = diamNakeAxon
+  }
+
+  // Myelinated axon with nodes of Ranvier
+  for i=0,n_myelin-1 {
+    myelin[i] {         // myelin element
+      nseg = 5
+      L = 100
+      diam = diamMyelin    
+    }
+    node[i] {           // nodes of Ranvier
+      nseg = 1
+      L = 1           
+      diam = diamNode     
+    }
+  }
+
+  
+
+
+
+  // ---------------------Connecting---------------------------
+  /* ------axon connect to big basal dendrite-------------- */
+  connect hill(0),  soma(1) //bigDend[0](1)     // hillock --> big dendrite[3]
+  connect ais[0](0), hill(1)          // ais[0]   --> hillock
+  for i=0,8 ais[i] {                  
+     connect ais[i+1](0), 1          // ais[9] -> ... -> ais[0]
+  }
+  connect nakeaxon(0), ais[9](1)        //  nakeaxon  ---> ais[9]
+
+  nakeaxon connect myelin[0](0), 1     //  myelin[0]  --> nakeaxon
+  for i=1,n_myelin-1  {                     
+      myelin[i-1] connect node[i](0), 1
+      node[i] connect myelin[i](0), 1      // (myelin[0] node[0]) -> ... -> (myelin[n_myelin] node[n_myelin])
+  }
+
+
+
+}

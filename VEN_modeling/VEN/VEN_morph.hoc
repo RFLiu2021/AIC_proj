@@ -1,0 +1,109 @@
+
+
+// ------------------------------------------------
+//    Cell Geometry
+// ------------------------------------------------
+forall delete_section()
+
+proc celldef() {
+  subsets()
+  geom()
+  biophys()
+  geom_nseg()
+}
+
+apicNum		=	15
+bigDendNum	=	27
+myNum		=	10
+nodeNum		=	10
+
+create soma, bigDend[bigDendNum], apic[apicNum]  //, my[myNum], node[nodeNum]
+
+load_file("soma_3d_morphMat.hoc")
+soma_shape()
+
+load_file("bigDen_3d_morphMat.hoc")
+bigDend_shape()
+
+load_file("apical_3d_morphMat.hoc")
+apical_shape()
+
+//connect the apical dendrite.
+connect apic[0](0), soma(0)        //apic[0] : R
+connect apic[1](0), apic[0](1)     //apic[1] : R-1
+connect apic[2](0), apic[0](1)     //apic[2] : R-2
+connect apic[3](0), apic[1](1)     //apic[3] : R-1-1
+connect apic[4](0), apic[1](1)     //apic[4] : R-1-2
+connect apic[5](0), apic[3](1)     //apic[5] : R-1-1-1
+connect apic[6](0), apic[3](1)     //apic[6] : R-1-1-2
+connect apic[7](0), apic[5](1)     //apic[7] : R-1-1-1-1
+connect apic[8](0), apic[5](1)     //apic[8] : R-1-1-1-2
+connect apic[9](0), apic[7](1)     //apic[9] : R-1-1-1-1-1
+connect apic[10](0), apic[9](1)    //apic[10] : R-1-1-1-1-1-1
+connect apic[11](0), apic[9](1)    //apic[11] : R-1-1-1-1-1-2
+connect apic[12](0), apic[7](1)    //apic[12] : R-1-1-1-1-2
+connect apic[13](0), apic[12](1)   //apic[13] : R-1-1-1-1-2-1
+connect apic[14](0), apic[12](1)   //apic[14] : R-1-1-1-1-2-2
+
+connect bigDend[0](0), soma(1)      //bigDend[0]     : R
+connect bigDend[1](0), bigDend[0](1)    //bigDend[1]   : R-1
+connect bigDend[2](0), bigDend[0](1)    //bigDend[2]   : R-2
+connect bigDend[3](0), bigDend[1](1)    //bigDend[3]   : R-1-1
+connect bigDend[4](0), bigDend[1](1)    //bigDend[4]   : R-1-2
+connect bigDend[5](0), bigDend[3](1)    //bigDend[5]   : R-1-1-1
+connect bigDend[6](0), bigDend[3](1)    //bigDend[6]   : R-1-1-2
+connect bigDend[7](0), bigDend[5](1)    //bigDend[7]   : R-1-1-1-1
+connect bigDend[8](0), bigDend[5](1)    //bigDend[8]   : R-1-1-1-2
+connect bigDend[9](0), bigDend[7](1)    //bigDend[9]   : R-1-1-1-1-1
+connect bigDend[10](0), bigDend[7](1)    //bigDend[10] : R-1-1-1-1-2
+connect bigDend[11](0), bigDend[9](1)    //bigDend[11] : R-1-1-1-1-1-1
+connect bigDend[12](0), bigDend[9](1)    //bigDend[12] : R-1-1-1-1-1-2
+connect bigDend[13](0), bigDend[11](1)   //bigDend[13] : R-1-1-1-1-1-1-1
+connect bigDend[14](0), bigDend[11](1)   //bigDend[14] : R-1-1-1-1-1-1-2
+connect bigDend[15](0), bigDend[13](1)   //bigDend[15] : R-1-1-1-1-1-1-1-1
+connect bigDend[16](0), bigDend[13](1)   //bigDend[16] : R-1-1-1-1-1-1-1-2
+connect bigDend[17](0), bigDend[12](1)   //bigDend[17] : R-1-1-1-1-1-2-1
+connect bigDend[18](0), bigDend[12](1)   //bigDend[18] : R-1-1-1-1-1-2-2
+connect bigDend[19](0), bigDend[8](1)    //bigDend[19] : R-1-1-1-2-1
+connect bigDend[20](0), bigDend[8](1)    //bigDend[20] : R-1-1-1-2-2
+connect bigDend[21](0), bigDend[4](1)    //bigDend[21] : R-1-2-1
+connect bigDend[22](0), bigDend[21](1)   //bigDend[22] : R-1-2-1-1
+connect bigDend[23](0), bigDend[21](1)   //bigDend[23] : R-1-2-1-2
+connect bigDend[24](0), bigDend[22](1)   //bigDend[24] : R-1-2-1-1-1
+connect bigDend[25](0), bigDend[22](1)   //bigDend[25] : R-1-2-1-1-2
+connect bigDend[26](0), bigDend[4](1)    //bigDend[26] : R-1-2-2
+
+
+// Group the apartments.
+objref all, somatic, bigBasal, apical, allBasal, allDend
+proc subsets() { local i
+    objref  all, somatic, basal, bigBasal, apical, allBasal, allDend
+    somatic = new SectionList()
+        soma somatic.append()
+    bigBasal = new SectionList()
+        for i=0, 26  bigDend[i] bigBasal.append()
+    allBasal = new SectionList()
+        bigBasal allBasal.append()       
+    apical = new SectionList()
+        for i=0, 14  apic[i] apical.append()
+    allDend = new SectionList()
+        allBasal allDend.append()
+        apical   allDend.append()
+ 
+}
+
+load_file("../mechs/createAxon.hoc")
+create_axon()
+
+
+proc geom() {
+}
+proc geom_nseg() {
+}
+proc biophys() {
+}
+
+
+access soma
+
+celldef()
