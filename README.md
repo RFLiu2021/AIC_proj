@@ -1,4 +1,9 @@
-# AIC_proj
+# Cell Atlas and Novel Signal Processing Strategy in Primate Insular Cortex
 Data analysis codes for AIC research project
+<img src="图片URL" alt="图片描述" width="宽度" height="高度">
 
-The relative datasets were deposited at http://
+This repository contains the analysis code and the preprocessed data for the above manuscript.
+
+Preprocessed data and meta data
+
+
