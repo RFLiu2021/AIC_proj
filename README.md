@@ -39,7 +39,7 @@ We constructed the computational models using NEURON (version 8.0). The correspo
 
 All primary datasets from this study have been deposited in public repositories.
 
-&emsp;&emsp;● **Transcriptomics**: Raw transcriptomic data in FASTQ format, meta data and relavent processed data (.h5ad), including both scRNA-seq (10x) and Patch-seq data, are available at NCBI GEO under accession codes GSExxxx1 and GSExxxx2, respectively.
+&emsp;&emsp;● **Transcriptomics**: Raw transcriptomic data in FASTQ format, meta data and relavent processed data (.h5ad), including both scRNA-seq (10x) and Patch-seq data, are available at NCBI GEO under accession codes <code>GSExxxx1</code>  and <code>GSExxxx2</code>, respectively. They can be downloaded from https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSMxxxxxxx1 and https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSMxxxxxxx2.
 
 &emsp;&emsp;● **Electrophysiology**: Raw electrophysiological data in NWB format, along with corresponding metadata, can be accessed from the DANDI Archive at http://dandiarchive.org/dandiset/xxxxxxxx. This dataset includes recordings of firing patterns, multi-patch configurations, postsynaptic current traces, and outside-out sodium currents.
 
