@@ -10,17 +10,17 @@ The repository is organized as follows:
 
 &emsp;&emsp;● **10X**: Contains Jupyter notebooks for the analysis of scRNA-seq data (10X Genomics) and the generation of related figures.
 
-&emsp;&emsp;● **Metabolism**: Contains the normalized metabolic data table and code used to generate related figures (Figure 8 and Extended Data Figure 10).
+&emsp;&emsp;● **Metabolism**: Contains the normalized metabolic data table and codes used to generate related figures (Figure 8 and Extended Data Figure 10).
 
-&emsp;&emsp;● **Modeling**: Contains hoc scripts for neuron models (Neuron 8.0) and MATLAB code for generating related figures.
+&emsp;&emsp;● **Modeling**: Contains hoc scripts for neuron models (Neuron 8.0) and MATLAB codes for generating related figures.
 
-&emsp;&emsp;● **Ephys**: Contains Python and MATLAB code for electrophysiological data analysis and figure generation.
+&emsp;&emsp;● **Ephys**: Contains Python and MATLAB codes for electrophysiological data analysis and figure generation.
 
-&emsp;&emsp;● **Morphology**: Contains Python and MATLAB code for morphological data analysis and figure generation.
+&emsp;&emsp;● **Morphology**: Contains Python and MATLAB codes for morphological data analysis and figure generation.
 
-&emsp;&emsp;● **patchSeq**: Contains code for analyzing the transcriptomic data of Patch-seq cells.
+&emsp;&emsp;● **patchSeq**: Contains codes for analyzing the transcriptomic data of Patch-seq cells.
 
-&emsp;&emsp;● **patchSeqMappingTo10X** Mapping to 10X: Contains code for mapping Patch-seq neurons transcriptomically to the scRNA-seq neuronal atlas.
+&emsp;&emsp;● **patchSeqMappingTo10X** Mapping to 10X: Contains codes for mapping Patch-seq neurons transcriptomically to the scRNA-seq neuronal atlas.
 
 --------------------------------------
 ### Preprocessed data and meta data
