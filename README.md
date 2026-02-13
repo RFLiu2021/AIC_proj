@@ -1,5 +1,5 @@
 # Cell Atlas and Novel Signal Processing Strategy in Primate Insular Cortex
-<img src="Abstract.jpg" alt="图片描述" width="宽度" height="高度">
+<img src="Abstract_n.jpg" alt="图片描述" width="宽度" height="高度">
 Rui-Feng Liu*, Mengyao Huang*, Yuhui Shen*, Mingting Shao*, Junzhan Jing, Nana Xu, Lei Tang, Biaodi Liu, Jianming Shi,  Fanrui Chen, Zhao-Zhe Hao, Xiaolong Jiang and Sheng Liu
 
 #### This repository contains the analysis code and the preprocessed data for the above manuscript.
