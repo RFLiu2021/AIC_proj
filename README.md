@@ -51,7 +51,7 @@ All primary datasets from this study have been deposited in public repositories.
 
 &emsp;&emsp;&emsp;https://dandiarchive.org/dandiset/001752 (Post-synaptic current dataset)
 
-&emsp;&emsp;&emsp; These datasets include recordings of firing patterns, outside-out sodium channel currents, multi-patch configurations, and postsynaptic current traces.
+&emsp;&emsp;&emsp; These datasets include electrophysiology traces of firing patterns, outside-out sodium channel currents, multi-patch configurations, and postsynaptic current traces.
 
 &emsp;&emsp;● **Morphology**: Raw morphological reconstructions are deposited at NeuroMorpho.Org and are available via the persistent link: https://doi.org/10.13021/y4be-0p18.
 
