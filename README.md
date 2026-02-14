@@ -45,11 +45,11 @@ All primary datasets from this study have been deposited in public repositories.
 
 &emsp;&emsp;&emsp;https://dandiarchive.org/dandiset/001746 (electrophysiology for Patch-seq) 
 
-&emsp;&emsp;&emsp;https://dandiarchive.org/dandiset/001746 (Sodium chanel current) 
+&emsp;&emsp;&emsp;https://dandiarchive.org/dandiset/001750 (Sodium chanel current) 
 
-&emsp;&emsp;&emsp;https://dandiarchive.org/dandiset/001746 (Simutaneous multi-channel Patch-clamp recording) 
+&emsp;&emsp;&emsp;https://dandiarchive.org/dandiset/001751 (Simutaneous multi-channel Patch-clamp recording) 
 
-&emsp;&emsp;&emsp;https://dandiarchive.org/dandiset/001746 (Post-synaptic current dataset)
+&emsp;&emsp;&emsp;https://dandiarchive.org/dandiset/001752 (Post-synaptic current dataset)
 
 &emsp;&emsp;&emsp; These datasets include recordings of firing patterns, outside-out sodium channel currents, multi-patch configurations, and postsynaptic current traces.
 
