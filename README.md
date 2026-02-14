@@ -41,7 +41,12 @@ All primary datasets from this study have been deposited in public repositories.
 
 &emsp;&emsp;● **Transcriptomics**: Raw transcriptomic data in FASTQ format, meta data and relavent processed data (.h5ad), including both scRNA-seq (10x) and Patch-seq data, are available at NCBI GEO under accession codes <code>GSExxxx1</code>  and <code>GSExxxx2</code>, respectively. They can be downloaded from https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSMxxxxxxx1 and https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSMxxxxxxx2.
 
-&emsp;&emsp;● **Electrophysiology**: Raw electrophysiological data in NWB format, along with corresponding metadata, can be accessed from the DANDI Archive at http://dandiarchive.org/dandiset/xxxxxxxx. This dataset includes recordings of firing patterns, multi-patch configurations, postsynaptic current traces, and outside-out sodium currents.
+&emsp;&emsp;● **Electrophysiology**: Raw electrophysiological data in NWB format, along with corresponding metadata, can be accessed from the DANDI Archive at 
+&emsp;&emsp;&emsp;https://dandiarchive.org/dandiset/001746 (electrophysiology for Patch-seq) 
+&emsp;&emsp;&emsp;https://dandiarchive.org/dandiset/001746 (Sodium chanel current) 
+&emsp;&emsp;&emsp;https://dandiarchive.org/dandiset/001746 (Simutaneous multi-channel Patch-clamp recording) 
+&emsp;&emsp;&emsp;https://dandiarchive.org/dandiset/001746 (Post-synaptic current dataset)
+&emsp;&emsp;&emsp; These datasets include recordings of firing patterns, outside-out sodium channel currents, multi-patch configurations, and postsynaptic current traces.
 
 &emsp;&emsp;● **Morphology**: Raw morphological reconstructions are deposited at NeuroMorpho.Org and are available via the persistent link: https://doi.org/10.13021/y4be-0p18.
 
