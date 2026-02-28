@@ -1,0 +1,3 @@
+Processed data files in .h5ad format of scRNAseq and Patch-seq experiments are available at the GEO with raw data
+Accession number GEO (scRNAseq): GSE319557
+Accession number GEO (Patch-seq): GSE319369
