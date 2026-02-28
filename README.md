@@ -25,7 +25,7 @@ The repository is organized as follows:
 --------------------------------------
 ### Preprocessed data and meta data
 
-Because of the large file sizes, some processed data files are not included directly in this repository. However, all processed data files have been deposited at **ZENODO** and are organized in the same hierarchical folder structure as presented here (Github). They are available for download from https://doi.org/10.5281/zenodo.17799560. The processed data (h5ad format) from the AIC scRNA-seq and Patch-seq experiments, along with the corresponding raw data (FASTQ format), have also been deposited in the NCBI GEO database (see following).
+Because of the large file sizes, some processed data files are not included directly in this repository. However, all processed data files have been deposited at **ZENODO** and are organized in the same hierarchical folder structure as presented here (Github). They are available for download from https://doi.org/10.5281/zenodo.17714764. The processed data (h5ad format) from the AIC scRNA-seq and Patch-seq experiments, along with the corresponding raw data (FASTQ format), have also been deposited in the NCBI GEO database (see following).
 
 ------------------------------------------------
 ### Reproduce the analysis figures
@@ -55,7 +55,7 @@ All primary datasets from this study have been deposited in public repositories.
 
 &emsp;&emsp;● **Morphology**: Raw morphological reconstructions are deposited at NeuroMorpho.Org and are available via the persistent link: https://doi.org/10.13021/y4be-0p18.
 
-&emsp;&emsp;● **Metabolomics**: Raw metabolic data are available at MetaboLights under accession code https://www.ebi.ac.uk/metabolights/xxxxxxxx.
+&emsp;&emsp;● **Metabolomics**: Raw metabolic data are available at MetaboLights under accession code https://www.ebi.ac.uk/metabolights/editor/MTBLS13927.
 
 ------------------------------------------
 ### Level of Support
