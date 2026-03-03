@@ -55,7 +55,7 @@ All primary datasets from this study have been deposited in public repositories.
 
 &emsp;&emsp;● **Morphology**: Raw morphological reconstructions are deposited at NeuroMorpho.Org and are available via the persistent link: https://doi.org/10.13021/y4be-0p18.
 
-&emsp;&emsp;● **Metabolomics**: Raw metabolic data are available at MetaboLights under accession code https://www.ebi.ac.uk/metabolights/editor/MTBLS13927.
+&emsp;&emsp;● **Metabolomics**: Raw metabolic data are available at MetaboLights under accession code <code>MTBLS13927</code>, https://www.ebi.ac.uk/metabolights/editor/MTBLS13927.
 
 ------------------------------------------
 ### Level of Support
