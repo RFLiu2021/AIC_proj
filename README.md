@@ -4,7 +4,7 @@ Rui-Feng Liu*, Mengyao Huang*, Yuhui Shen*, Mingting Shao*, Junzhan Jing, Nana X
 
 #### This repository contains the analysis code and the preprocessed data for the above manuscript.
 -----------------------------------------------
-### Repository Structure
+### Repository structure
 
 The repository is organized as follows:
 
