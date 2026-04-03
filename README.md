@@ -45,7 +45,7 @@ All primary datasets from this study have been deposited in public repositories.
 
 &emsp;&emsp;&emsp;https://dandiarchive.org/dandiset/001746 (electrophysiology for Patch-seq) 
 
-&emsp;&emsp;&emsp;https://dandiarchive.org/dandiset/001750 (Sodium chanel current) 
+&emsp;&emsp;&emsp;https://dandiarchive.org/dandiset/001750 (Sodium channel current) 
 
 &emsp;&emsp;&emsp;https://dandiarchive.org/dandiset/001751 (Simutaneous multi-channel Patch-clamp recording) 
 
